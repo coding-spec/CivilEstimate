@@ -89,15 +89,6 @@ export default function CommercialEstimate() {
           </div>
         </div>
 
-        {/* ✅ Added Rates & Discount in new row */}
-        <div className="cost-metrics" style={{ display: "block", marginTop: "10px" }}>
-          <div className="metric">
-            Rates per sqft: <strong>₹14</strong>
-          </div>
-          <div className="metric">
-            Discount: <strong>₹4</strong>
-          </div>
-        </div>
 
         {/* Proceed option instead of showing cost directly */}
         <div
@@ -113,8 +104,7 @@ export default function CommercialEstimate() {
             className="border px-4 py-2 rounded mb-4"
           >
             <option value="">-- Select Option --</option>
-            <option value="with">With Map (Paid)</option>
-            <option value="without">Without Map (Free)</option>
+            <option value="without">Without Map</option>
           </select>
 
           <button

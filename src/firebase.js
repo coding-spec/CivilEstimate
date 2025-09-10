@@ -3,13 +3,14 @@ import { initializeApp } from "firebase/app";
 import { getFirestore, collection, addDoc, getDocs } from "firebase/firestore";
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 
+// Use environment variables from .env
 const firebaseConfig = {
-  apiKey: "AIzaSyAITAdHUgd_RyJJOEPnx3_W_G2EmkKTF1c",
-  authDomain: "mycivilestimate.firebaseapp.com",
-  projectId: "mycivilestimate",
-  storageBucket: "mycivilestimate.firebasestorage.app",
-  messagingSenderId: "1007871728173",
-  appId: "1:1007871728173:web:b60feba4af6efdc5f776a4"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID
 };
 
 const app = initializeApp(firebaseConfig);
