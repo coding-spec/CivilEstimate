@@ -1,0 +1,131 @@
+/* src/styles/global.css */
+:root {
+  --bg:#f5f7fb;
+  --card:#ffffff;
+  --accent:#0b63e6;
+  --accent-2:#0d1b2a;
+  --muted:#64748b;
+  --glass: rgba(11,61,145,0.06);
+  --radius:10px;
+  --container:1100px;
+}
+
+/* Simple reset */
+* { box-sizing:border-box; }
+html, body, #root {
+  height:100%;
+  margin:0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+body {
+  background:linear-gradient(180deg,var(--bg),white);
+  color:#0f172a;
+  line-height:1.6;
+}
+
+/* shared container */
+.container {
+  max-width:var(--container);
+  margin:0 auto;
+  padding:28px;
+}
+
+/* page wrapper */
+.page-wrap {
+  min-height:calc(100vh - 120px);
+}
+
+/* page base for enter animation */
+.page {
+  opacity:0;
+  transform:translateY(6px);
+  transition: opacity .45s ease, transform .45s ease;
+}
+.page.enter {
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* buttons */
+.btn {
+  display:inline-block;
+  padding:10px 14px;
+  border-radius:8px;
+  border:0;
+  background:var(--accent-2);
+  color:white;
+  cursor:pointer;
+  font-weight:600;
+  transition:transform .18s ease, box-shadow .18s;
+  font-size: 15px;
+}
+.btn:hover {
+  transform:translateY(-3px);
+  box-shadow:0 10px 24px rgba(11,61,145,0.08);
+}
+.btn.ghost {
+  background:transparent;
+  color:var(--accent-2);
+  border:1px solid rgba(13,27,42,0.06);
+}
+.btn.primary { background:linear-gradient(90deg,var(--accent),#0b54d8); }
+.btn.small { padding:6px 8px; font-size:13px; }
+.btn.danger { background:#ef4444; }
+
+/* small utility */
+.muted { color:var(--muted); font-size:13px; }
+
+/* sections */
+.section-title {
+  font-size:1.45rem;
+  color:var(--accent-2);
+  margin:0 0 12px;
+}
+
+/* ---------------- Responsive ---------------- */
+@media (max-width: 992px) {
+  .container {
+    padding:20px;
+  }
+  .section-title {
+    font-size:1.35rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding:16px;
+  }
+  .section-title {
+    font-size:1.2rem;
+  }
+  .btn {
+    font-size:14px;
+    padding:9px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 15px;
+  }
+  .container {
+    padding:12px;
+  }
+  .section-title {
+    font-size:1.05rem;
+  }
+  .btn {
+    width:100%; /* full width for mobile */
+    padding:10px;
+    font-size:14px;
+    text-align:center;
+  }
+  .btn.small {
+    width:auto; /* small buttons stay compact */
+  }
+  .muted {
+    font-size:12px;
+  }
+}

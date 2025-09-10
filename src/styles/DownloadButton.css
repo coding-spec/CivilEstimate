@@ -1,0 +1,83 @@
+.download-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  justify-content: center;
+  animation: fadeInUp 1s ease-in-out;
+  flex-wrap: wrap; /* allow wrapping */
+}
+
+.btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-width: 120px; /* keeps button size consistent */
+  text-align: center;
+}
+
+/* PDF button */
+.btn.pdf {
+  background: linear-gradient(135deg, #e63946, #ff6b6b);
+  box-shadow: 0 4px 10px rgba(230, 57, 70, 0.4);
+}
+
+/* Excel button */
+.btn.excel {
+  background: linear-gradient(135deg, #2a9d8f, #38ef7d);
+  box-shadow: 0 4px 10px rgba(42, 157, 143, 0.4);
+}
+
+/* Hover effects */
+.btn:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+/* Click (active) effect */
+.btn:active {
+  transform: scale(0.95);
+}
+
+/* Entry animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------------- Responsive ---------------- */
+@media (max-width: 768px) {
+  .download-buttons {
+    gap: 12px;
+  }
+
+  .btn {
+    font-size: 15px;
+    padding: 10px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .download-buttons {
+    flex-direction: column; /* stack vertically */
+    align-items: center;
+    gap: 10px;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 280px;
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+}

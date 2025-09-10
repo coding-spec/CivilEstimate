@@ -1,0 +1,124 @@
+.contact-container {
+  padding: 50px 20px;
+  background-color: #fef9f4;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+.contact-container h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.contact-container p {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.contact-card {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.contact-card label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.contact-card input,
+.contact-card textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.contact-card textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contact-card button {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #4b79a1;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.contact-card button:hover {
+  background-color: #355068;
+}
+
+/* -------------------
+   Responsive Styles
+------------------- */
+
+/* Mobile (max 480px) */
+@media (max-width: 480px) {
+  .contact-container {
+    padding: 30px 15px;
+  }
+
+  .contact-container h2 {
+    font-size: 26px;
+  }
+
+  .contact-container p {
+    font-size: 15px;
+    margin-bottom: 25px;
+  }
+
+  .contact-card {
+    padding: 20px;
+  }
+
+  .contact-card input,
+  .contact-card textarea {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .contact-card button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+/* Tablet (481px–768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .contact-container h2 {
+    font-size: 30px;
+  }
+
+  .contact-container p {
+    font-size: 16px;
+  }
+
+  .contact-card {
+    padding: 25px;
+    max-width: 500px;
+  }
+}
+
+/* Desktop (>=769px) */
+@media (min-width: 769px) {
+  .contact-card {
+    max-width: 650px;
+  }
+}

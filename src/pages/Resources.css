@@ -1,0 +1,157 @@
+.resources-container {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  background-color: #fef9f4;
+  color: #333;
+}
+
+.resources-container h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.resources-container p {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Form */
+.resource-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.resource-form input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  flex: 1 1 200px;
+  min-width: 180px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.resource-form input:focus {
+  border-color: #4b79a1;
+  box-shadow: 0 0 5px rgba(75,121,161,0.5);
+}
+
+.resource-form button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background-color: #4b79a1;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  flex-shrink: 0;
+}
+
+.resource-form button:hover {
+  background-color: #355068;
+  transform: translateY(-2px);
+}
+
+/* Table */
+.materials-list {
+  overflow-x: auto; /* ✅ enables horizontal scroll on small screens */
+}
+
+.materials-list table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px; /* ensures scroll on small screens */
+}
+
+.materials-list th, .materials-list td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  font-size: 15px;
+  transition: background-color 0.3s;
+}
+
+.materials-list tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.materials-list tr:hover {
+  background-color: #f0f0f0;
+}
+
+.materials-list button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #e74c3c;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.materials-list button:hover {
+  background-color: #c0392b;
+  transform: translateY(-2px);
+}
+
+/* --------------------
+   Responsive Styles
+-------------------- */
+
+/* Mobile (max 480px) */
+@media (max-width: 480px) {
+  .resources-container {
+    padding: 20px 12px;
+  }
+
+  .resources-container h2 {
+    font-size: 26px;
+  }
+
+  .resources-container p {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+
+  .resource-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .resource-form input,
+  .resource-form button {
+    width: 100%;
+  }
+
+  .materials-list th, .materials-list td {
+    font-size: 13px;
+    padding: 8px;
+  }
+}
+
+/* Tablet (481px–768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .resources-container h2 {
+    font-size: 30px;
+  }
+
+  .resources-container p {
+    font-size: 16px;
+  }
+
+  .resource-form input {
+    min-width: 200px;
+  }
+
+  .materials-list th, .materials-list td {
+    font-size: 14px;
+  }
+}
