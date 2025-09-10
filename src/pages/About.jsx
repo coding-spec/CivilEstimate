@@ -1,6 +1,6 @@
 // src/pages/About.jsx
 import React from "react";
-import "./About.css"; // we'll create this file
+import "./About.css"; 
 
 function About() {
   const whyImportant = [
